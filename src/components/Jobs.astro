@@ -9,8 +9,11 @@ interface Props {
 const { title, date, company, description } = Astro.props;
 ---
 
-<div class="pt-4">
-  <p class="font-semibold text-lg">{title}</p>
-  <p class="italic">{company}, {date}</p>
-  <p class="mt-2">{description}</p>
+<div>
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+    <p class="font-medium">{title}</p>
+    <p class="text-sm text-neutral-500 dark:text-neutral-500 shrink-0">{date}</p>
+  </div>
+  <p class="text-sm text-neutral-600 dark:text-neutral-400">{company}</p>
+  <p class="text-sm text-neutral-700 dark:text-neutral-300 mt-1">{description}</p>
 </div>
